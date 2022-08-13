@@ -55,10 +55,7 @@ const Card = ({ type, video }) => {
   return (
     <Link to="/video/test" style={{ textDecoration: "none" }}>
       <Container type={type}>
-        <Image
-          type={type}
-          src={video.imgUrl}
-        />
+        <Image type={type} src={video.imgUrl} />
         <Details type={type}>
           <ChannelImage
             type={type}
@@ -67,7 +64,9 @@ const Card = ({ type, video }) => {
           <Texts>
             <Title>{video.title}</Title>
             <ChannelName>Lama Dev</ChannelName>
-            <Info>{video.views} views • {video.createdAt}</Info>
+            <Info>
+              {video.views} views • {video.createdAt}
+            </Info>
           </Texts>
         </Details>
       </Container>
